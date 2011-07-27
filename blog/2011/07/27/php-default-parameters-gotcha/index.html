@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Ralph Holzmann</title>
+  <title>Ralph Holzmann: PHP Default Parameters Falsy Values</title>
   <meta name="author" content="Ralph Holzmann">
   
 
@@ -75,21 +75,28 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
-
-
-
-  <article>
-    
+      <div>
+<article class="hentry">
+  
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2011/07/27/php-default-parameters-gotcha">PHP Default Parameters Falsy Values</a></h1>
+      <h1 class="entry-title">PHP Default Parameters Falsy Values</h1>
     
+    
+      <p class="meta">
+
+
+
+
+<time datetime="Wed Jul 27 07:45:00 -0500 2011" pubdate  updated >Jul 27<span>th</span>, 2011</time>
+
+
+</p>
     
   </header>
 
 
-  <div class="entry-content"><h2>The Setup</h2>
+<div class="entry-content"><h2>The Setup</h2>
 
 <p>Last night, I lost 2 hours debugging a PHP issue for work. After figuring out what the issue was, I was immediately filled with a rage that <a href="http://blog.razornylon.com/programmer-describes-his-hate-for-adobe-in-the-codes-comments-1322/">burns with the fierce passion of a million suns</a>. At GroupCard, we use our own custom object relational mapping (ORM) framework. In this framework, we have various models that map 1-1 to their respective database tables. All the models extend from a <code>baseModel</code> class, to facilitate the typical <a href="http://en.wikipedia.org/wiki/Create,_read,_update_and_delete">CRUD</a> operations. The offending issue was surrounding a <code>boolean</code> default parameter we had in our base model constuctor. Here&#8217;s the method signature:</p>
 
@@ -274,30 +281,65 @@ What we do in this case is pass <code>false</code> as the second argument to the
 
 <p>Ridiculous.</p>
 </div>
+
+
   <footer>
-    <a rel="full-article" href="/blog/2011/07/27/php-default-parameters-gotcha">Read on &rarr;</a>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Ralph Holzmann</span></span>
+
+      
+
+
+
+
+<time datetime="Wed Jul 27 07:45:00 -0500 2011" pubdate  updated >Jul 27<span>th</span>, 2011</time>
+
+
+
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/default-/'>default,</a>, <a class='category' href='/blog/categories/php-/'>php,</a>, <a class='category' href='/blog/categories/rant/'>rant</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://ralphholzmann.com/blog/2011/07/27/php-default-parameters-gotcha" data-via="ralphholzmann" data-counturl="http://ralphholzmann.com/blog/2011/07/27/php-default-parameters-gotcha" >Tweet</a>
+  
+  
+  <g:plusone size="medium"></g:plusone>
+  
+</div>
+
+    
   </footer>
+</article>
 
-
-  </article>
-
-<nav role="pagination">
-  <div>
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
-</nav>
-
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread"><div id="disqus_thread"></div>
 <script type="text/javascript">
-    var disqus_shortname = 'ralphholzmann';
-    (function () {
-      var s = document.createElement('script'); s.async = true;
-      s.type = 'text/javascript';
-      s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
-      (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
+  var disqus_shortname = 'ralphholzmann';
+  var disqus_identifier = 'http://ralphholzmann.com/blog/2011/07/27/php-default-parameters-gotcha';
+  var disqus_url = 'http://ralphholzmann.com/blog/2011/07/27/php-default-parameters-gotcha';
+  //var disqus_developer = 1;
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
 </script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
 
