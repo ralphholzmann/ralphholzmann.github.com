@@ -1,15 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://ralphholzmann.com/blog/2011/07/27/php-default-parameters-gotcha</loc>
-        <lastmod>2011-07-27T10:16:07-05:00</lastmod>
-    </url>
-    <url>
         <loc>http://ralphholzmann.com/blog/archives/</loc>
-        <lastmod>2011-07-27T10:16:07-05:00</lastmod>
+        <lastmod>2011-07-27T07:27:43-05:00</lastmod>
     </url>
     <url>
         <loc>http://ralphholzmann.com/</loc>
-        <lastmod>2011-07-27T10:16:07-05:00</lastmod>
+        <lastmod>2011-07-27T07:27:43-05:00</lastmod>
     </url>
 </urlset>
