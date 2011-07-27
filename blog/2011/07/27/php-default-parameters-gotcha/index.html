@@ -98,7 +98,7 @@
 
 <div class="entry-content"><h2>The Setup</h2>
 
-<p>Last night, I lost 2 hours debugging a PHP issue for work. After figuring out what the issue was, I was immediately filled with a rage that <a href="http://blog.razornylon.com/programmer-describes-his-hate-for-adobe-in-the-codes-comments-1322/">burns with the fierce passion of a million suns</a>. At GroupCard, we use our own custom object relational mapping (ORM) framework. In this framework, we have various models that map 1-1 to their respective database tables. All the models extend from a <code>baseModel</code> class, to facilitate the typical <a href="http://en.wikipedia.org/wiki/Create,_read,_update_and_delete">CRUD</a> operations. The offending issue was surrounding a <code>boolean</code> default parameter we had in our base model constuctor. Here&#8217;s the method signature:</p>
+<p>Last night, I lost 2 hours debugging a PHP issue for a project at work. After figuring out what the issue was, I was immediately filled with a rage that <a href="http://blog.razornylon.com/programmer-describes-his-hate-for-adobe-in-the-codes-comments-1322/">burns with the fierce passion of a million suns</a>. At GroupCard, we use our own custom object relational mapping (ORM) framework. In this framework, we have various models that map 1-1 to their respective database tables. All the models extend from a <code>baseModel</code> class, to facilitate the typical <a href="http://en.wikipedia.org/wiki/Create,_read,_update_and_delete">CRUD</a> operations. The offending issue was surrounding a <code>boolean</code> default parameter we had in our base model constuctor. Here&#8217;s the method signature:</p>
 
 <div><figure role=code><figcaption><span>baseModel.php </span></figcaption>
  <div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
@@ -280,6 +280,10 @@ What we do in this case is pass <code>false</code> as the second argument to the
 
 
 <p>Ridiculous.</p>
+
+<h2>TL;DR</h2>
+
+<p>Passing a falsy value to a PHP function with a default value results in <em>always getting the default value</em>.</p>
 </div>
 
 

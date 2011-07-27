@@ -4,7 +4,7 @@
   <title></title>
   <link href="http://ralphholzmann.com/atom.xml" rel="self"/>
   <link href="http://ralphholzmann.com/"/>
-  <updated>2011-07-27T09:56:35-05:00</updated>
+  <updated>2011-07-27T10:16:13-05:00</updated>
   <id>http://ralphholzmann.com/</id>
   <author>
     <name>Ralph Holzmann</name>
@@ -19,7 +19,7 @@
     <id>http://ralphholzmann.com/blog/2011/07/27/php-default-parameters-gotcha</id>
     <content type="html">&lt;h2&gt;The Setup&lt;/h2&gt;
 
-&lt;p&gt;Last night, I lost 2 hours debugging a PHP issue for work. After figuring out what the issue was, I was immediately filled with a rage that &lt;a href=&quot;http://blog.razornylon.com/programmer-describes-his-hate-for-adobe-in-the-codes-comments-1322/&quot;&gt;burns with the fierce passion of a million suns&lt;/a&gt;. At GroupCard, we use our own custom object relational mapping (ORM) framework. In this framework, we have various models that map 1-1 to their respective database tables. All the models extend from a &lt;code&gt;baseModel&lt;/code&gt; class, to facilitate the typical &lt;a href=&quot;http://en.wikipedia.org/wiki/Create,_read,_update_and_delete&quot;&gt;CRUD&lt;/a&gt; operations. The offending issue was surrounding a &lt;code&gt;boolean&lt;/code&gt; default parameter we had in our base model constuctor. Here's the method signature:&lt;/p&gt;
+&lt;p&gt;Last night, I lost 2 hours debugging a PHP issue for a project at work. After figuring out what the issue was, I was immediately filled with a rage that &lt;a href=&quot;http://blog.razornylon.com/programmer-describes-his-hate-for-adobe-in-the-codes-comments-1322/&quot;&gt;burns with the fierce passion of a million suns&lt;/a&gt;. At GroupCard, we use our own custom object relational mapping (ORM) framework. In this framework, we have various models that map 1-1 to their respective database tables. All the models extend from a &lt;code&gt;baseModel&lt;/code&gt; class, to facilitate the typical &lt;a href=&quot;http://en.wikipedia.org/wiki/Create,_read,_update_and_delete&quot;&gt;CRUD&lt;/a&gt; operations. The offending issue was surrounding a &lt;code&gt;boolean&lt;/code&gt; default parameter we had in our base model constuctor. Here's the method signature:&lt;/p&gt;
 
 &lt;div&gt;&lt;figure role=code&gt;&lt;figcaption&gt;&lt;span&gt;baseModel.php &lt;/span&gt;&lt;/figcaption&gt;
  &lt;div class=&quot;highlight&quot;&gt;&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre class=&quot;line-numbers&quot;&gt;&lt;span class='line'&gt;1&lt;/span&gt;
@@ -201,6 +201,10 @@ What we do in this case is pass &lt;code&gt;false&lt;/code&gt; as the second arg
 
 
 &lt;p&gt;Ridiculous.&lt;/p&gt;
+
+&lt;h2&gt;TL;DR&lt;/h2&gt;
+
+&lt;p&gt;Passing a falsy value to a PHP function with a default value results in &lt;em&gt;always getting the default value&lt;/em&gt;.&lt;/p&gt;
 </content>
   </entry>
   
